@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { TreeSelect } from 'ant-design-vue'
+
 const treeData = [
   {
     id: '1001',
@@ -20,8 +22,8 @@ const change = (value: any, label: any, extra: any) => {
   console.log(extra)
 }
 
-const fielaNames = { label: "name", value: 'id', children: 'children' };
+const fieldNames = { label: "name", value: 'id', children: 'children' };
 </script>
 <template>
-  <TreeSelect :treeData="treeData" @change="change" :fielaNames="fielaNames" />
+  <TreeSelect style="width: 280px; margin: 30px;" :treeData="treeData" @change="change" :fieldNames="fieldNames" />
 </template>
